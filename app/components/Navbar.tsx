@@ -18,11 +18,22 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Products", href: "/tattoo-products" },
     { name: "Courses", href: "/tattoo-course" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
@@ -63,10 +74,38 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white z-50 p-2"
+          className={`lg:hidden flex items-center justify-center w-12 h-12 bg-[#d4af37]/10 backdrop-blur-lg border border-[#d4af37]/30 rounded-full text-white transition-all active:scale-90 shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-[#d4af37]/20 ${mobileMenuOpen ? "z-[100]" : "z-50"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle Menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <div className="w-6 h-6 flex items-center justify-center relative">
+            <AnimatePresence mode="wait">
+              {mobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X size={24} className="text-[#d4af37]" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col gap-1 items-end"
+                >
+                  <div className="w-6 h-0.5 bg-[#d4af37] rounded-full"></div>
+                  <div className="w-4 h-0.5 bg-[#d4af37] rounded-full"></div>
+                  <div className="w-5 h-0.5 bg-[#d4af37] rounded-full"></div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </button>
       </div>
 
@@ -74,31 +113,49 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 lg:hidden flex flex-col pt-24 px-6 overflow-y-auto"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 bg-neutral-950 z-[90] lg:hidden flex flex-col h-[100dvh]"
           >
-            <div className="flex flex-col gap-6 pb-12">
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-white hover:text-[#d4af37] font-semibold text-xl transition-colors border-b border-white/10 pb-2 block"
+            <div className="flex flex-col h-full pt-20 px-8 pb-12">
+              <div className="flex flex-col gap-4">
+                {navLinks.map((link, index) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
                   >
-                    {link.name}
-                  </Link>
-                </div>
-              ))}
-              <Link
-                href="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="bg-[#d4af37] text-black font-bold py-3 px-6 rounded-full text-center mt-4 text-lg"
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-white hover:text-[#d4af37] font-medium text-2xl transition-colors py-3 block border-b border-white/5"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-auto"
               >
-                Book Appointment
-              </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="bg-[#d4af37] text-black font-bold py-4 px-6 rounded-xl text-center block text-lg shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                >
+                  Book Appointment
+                </Link>
+                <div className="mt-8 text-center text-gray-600 text-xs tracking-widest uppercase">
+                  <p>© {new Date().getFullYear()} Om Tattoo Studio</p>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
