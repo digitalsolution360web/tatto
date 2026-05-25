@@ -12,7 +12,7 @@ export default function TattooCoursePage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Professional <span className="text-[#d4af37]">Tattoo Training</span> Courses</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Professional <span className="text-[#d4af37]">Tattoo Training</span> Courses</h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
           <p className="text-gray-300 text-lg leading-relaxed">
             Learn tattoo art from industry professionals with practical training and certification.
@@ -26,7 +26,7 @@ export default function TattooCoursePage() {
               <BookOpen className="text-[#d4af37]" size={28} />
             </div>
             <h3 className="text-2xl font-serif font-bold text-white mb-4">Basic Hobby Course</h3>
-            <p className="text-gray-400 mb-6 h-12">Perfect for beginners interested in tattoo art basics.</p>
+            <p className="text-gray-400 mb-6 min-h-[3rem]">Perfect for beginners interested in tattoo art basics.</p>
             <ul className="space-y-3 mb-8 text-gray-300">
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Tattoo Introduction</li>
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Safety & Hygiene</li>
@@ -44,7 +44,7 @@ export default function TattooCoursePage() {
               <GraduationCap className="text-[#d4af37]" size={28} />
             </div>
             <h3 className="text-2xl font-serif font-bold text-white mb-4 mt-6">Intermediate Course</h3>
-            <p className="text-gray-400 mb-6 h-12">Develop professional tattoo skills with advanced techniques.</p>
+            <p className="text-gray-400 mb-6 min-h-[3rem]">Develop professional tattoo skills with advanced techniques.</p>
             <ul className="space-y-3 mb-8 text-gray-300">
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Shading Techniques</li>
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Line Work Practice</li>
@@ -59,7 +59,7 @@ export default function TattooCoursePage() {
               <Medal className="text-[#d4af37]" size={28} />
             </div>
             <h3 className="text-2xl font-serif font-bold text-white mb-4">Advanced Vocational Training</h3>
-            <p className="text-gray-400 mb-6 h-12">Professional career-focused tattoo training with certification.</p>
+            <p className="text-gray-400 mb-6 min-h-[3rem]">Professional career-focused tattoo training with certification.</p>
             <ul className="space-y-3 mb-8 text-gray-300">
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Advanced Tattoo Techniques</li>
               <li className="flex items-center gap-2"><span className="text-[#d4af37] text-xl">•</span> Client Handling</li>

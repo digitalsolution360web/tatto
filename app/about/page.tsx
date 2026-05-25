@@ -16,8 +16,8 @@ export default function AboutPage() {
           <div className="w-24 h-1 bg-[#d4af37] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+          <div className="relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
             <Image src="/tatto5.webp" alt="Om Tattoo Studio" fill className="object-cover" />
           </div>
           

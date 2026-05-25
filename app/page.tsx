@@ -75,13 +75,13 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 pointer-events-auto leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 pointer-events-auto leading-tight">
                 Ink Your Story with <br className="hidden md:block" /><span className="text-[#d4af37]">Professional Tattoo Art</span>
               </h1>
-              <p className="text-[#d4af37] font-medium text-base md:text-lg tracking-wide mb-4 pointer-events-auto">
+              <p className="text-[#d4af37] font-medium text-sm sm:text-base md:text-lg tracking-wide mb-4 pointer-events-auto">
                 Permanent Tattoos | Customized Designs | Tattoo Removal | Body Piercing | Tattoo Training
               </p>
-              <p className="text-gray-300 text-sm md:text-base mb-8 pointer-events-auto max-w-xl leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-8 pointer-events-auto max-w-xl leading-relaxed">
                 Creative tattoo studio offering unique tattoo designs, safe body piercing, tattoo removal, professional tattoo products, and certified tattoo courses for beginners to advanced artists.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-start items-center pointer-events-auto">
@@ -115,12 +115,12 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-[#d4af37] font-semibold tracking-wider uppercase mb-2">Welcome to Om Tattoo</h4>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">Every Tattoo Tells a <span className="text-[#d4af37]">Story</span></h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">Every Tattoo Tells a <span className="text-[#d4af37]">Story</span></h2>
               <div className="w-20 h-1 bg-[#d4af37] mb-8"></div>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
                 At Om Tattoo, we believe every tattoo tells a story. Our studio specializes in custom tattoo designs, permanent tattoos, body piercings, tattoo correction, and tattoo removal services using hygienic equipment and professional techniques.
               </p>
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
                 We also provide certified tattoo training courses for hobby learners and professional artists.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-white transition-colors font-semibold border-b border-[#d4af37] pb-1">
@@ -133,7 +133,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/5"
+              className="relative h-[300px] sm:h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/5"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
               <Image src="/tatto3.webp" alt="Tattoo Artist at work" fill className="object-cover" />
@@ -151,7 +151,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-[600px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+              className="relative h-[350px] sm:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
             >
               <Image src="/tatto5.webp" alt="Creative Design Process" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -251,7 +251,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-2 lg:order-1 relative h-[600px] w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10"
+              className="order-2 lg:order-1 relative h-[350px] sm:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10"
             >
               <Image src="/tatto4.webp" alt="Why Choose Om Tattoo" fill className="object-cover" />
             </motion.div>

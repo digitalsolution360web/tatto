@@ -49,7 +49,7 @@ export default function CustomizedTattooPage() {
             </div>
           </div>
           
-          <div className="order-1 lg:order-2 relative h-[600px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+          <div className="order-1 lg:order-2 relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             <Image src="/tatto2.webp" alt="Customized Tattoo Designs" fill className="object-cover" />
           </div>
         </div>

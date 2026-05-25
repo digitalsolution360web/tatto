@@ -51,17 +51,17 @@ export default function ServicesPage() {
   return (
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-20 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Our <span className="text-[#d4af37]">Services</span></h1>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Our <span className="text-[#d4af37]">Services</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             From intricate custom tattoos to safe piercing and professional tattoo removal, we offer a comprehensive range of body art services.
           </p>
         </div>
 
         {/* Feature Section with Left Image & Right Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+          <div className="relative h-[300px] sm:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10">
             <Image src="/tatto1.webp" alt="Tattoo Services" fill className="object-cover" />
           </div>
           

@@ -32,7 +32,7 @@ export default function PermanentTattooPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+          <div className="relative h-[300px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             <Image src="/tatto1.webp" alt="Permanent Tattoo Services" fill className="object-cover" />
           </div>
           

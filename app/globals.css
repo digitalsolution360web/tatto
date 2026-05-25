@@ -13,9 +13,17 @@
   --foreground: #ffffff;
 }
 
+html,
 body {
   background-color: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .swiper-pagination-bullet {
