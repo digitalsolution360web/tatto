@@ -11,9 +11,9 @@ export default function ContactPage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Contact <span className="text-[#d4af37]">Om Tattoo</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Contact <span className="text-[#d4af37]">Om Tattoo</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             Get in touch for tattoo appointments, piercing services, tattoo removal, or course enrollment.
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <textarea rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors" placeholder="Tell us about your ideas..."></textarea>
               </div>
               
-              <button type="submit" className="w-full bg-[#d4af37] text-black font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#c5a028] transition-all duration-300 mt-4 shadow-lg">
+              <button type="submit" className="w-full bg-[#d4af37] text-black font-bold text-base sm:text-lg px-8 py-3 sm:py-4 rounded-lg hover:bg-[#c5a028] transition-all duration-300 mt-4 shadow-lg">
                 Book Appointment Now
               </button>
             </form>

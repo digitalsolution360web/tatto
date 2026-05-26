@@ -21,9 +21,9 @@ export default function TattooProductsPage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Tattoo <span className="text-[#d4af37]">Products Sales</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Tattoo <span className="text-[#d4af37]">Products Sales</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             Buy professional tattoo products and accessories for tattoo artists and studios. Quality products for beginners and professionals.
           </p>
         </div>

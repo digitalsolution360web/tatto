@@ -19,13 +19,13 @@ export default function Home() {
   ];
 
   const services = [
-    { title: "Permanent Tattoos", icon: <Heart className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Customized Designs", icon: <Sparkles className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Tattoo Cover-Up & Correction", icon: <Star className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Tattoo Removal Services", icon: <Droplet className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Body Piercing", icon: <Shield className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Tattoo Products Sales", icon: <MapPin className="w-8 h-8 text-[#d4af37]" /> },
-    { title: "Tattoo Training Courses", icon: <CheckCircle2 className="w-8 h-8 text-[#d4af37]" /> },
+    { title: "Permanent Tattoos", icon: <Heart className="w-8 h-8 text-[#d4af37]" />, link: "/permanent-tattoo" },
+    { title: "Customized Designs", icon: <Sparkles className="w-8 h-8 text-[#d4af37]" />, link: "/customized-tattoo" },
+    { title: "Tattoo Cover-Up & Correction", icon: <Star className="w-8 h-8 text-[#d4af37]" />, link: "/contact" },
+    { title: "Tattoo Removal Services", icon: <Droplet className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-removal" },
+    { title: "Body Piercing", icon: <Shield className="w-8 h-8 text-[#d4af37]" />, link: "/body-piercing" },
+    { title: "Tattoo Products Sales", icon: <MapPin className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-products" },
+    { title: "Tattoo Training Courses", icon: <CheckCircle2 className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-course" },
   ];
 
   const whyChooseUs = [
@@ -78,22 +78,22 @@ export default function Home() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 pointer-events-auto leading-tight">
                 Ink Your Story with <br className="hidden md:block" /><span className="text-[#d4af37]">Professional Tattoo Art</span>
               </h1>
-              <p className="text-[#d4af37] font-medium text-sm sm:text-base md:text-lg tracking-wide mb-4 pointer-events-auto">
+              <p className="text-[#d4af37] font-medium text-xs sm:text-sm md:text-base lg:text-lg tracking-wide mb-4 pointer-events-auto">
                 Permanent Tattoos | Customized Designs | Tattoo Removal | Body Piercing | Tattoo Training
               </p>
-              <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-8 pointer-events-auto max-w-xl leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-6 pointer-events-auto max-w-xl leading-relaxed">
                 Creative tattoo studio offering unique tattoo designs, safe body piercing, tattoo removal, professional tattoo products, and certified tattoo courses for beginners to advanced artists.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-start items-center pointer-events-auto">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start items-center pointer-events-auto">
                 <Link
                   href="/contact"
-                  className="bg-[#d4af37] text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 w-full sm:w-auto text-center flex items-center justify-center gap-2"
+                  className="bg-[#d4af37] text-black font-bold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 w-full sm:w-auto text-center flex items-center justify-center gap-2"
                 >
-                  Book Appointment <ArrowRight size={20} />
+                  Book Appointment <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <Link
                   href="/tattoo-course"
-                  className="border-2 border-white/30 hover:border-[#d4af37] bg-black/20 hover:bg-[#d4af37]/10 backdrop-blur-sm text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 w-full sm:w-auto text-center"
+                  className="border-2 border-white/30 hover:border-[#d4af37] bg-black/20 hover:bg-[#d4af37]/10 backdrop-blur-sm text-white font-bold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto text-center"
                 >
                   Explore Courses
                 </Link>
@@ -233,7 +233,7 @@ export default function Home() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#d4af37] transition-colors">{service.title}</h3>
-                <Link href="/services" className="inline-flex items-center gap-2 text-sm text-gray-400 group-hover:text-white transition-colors mt-4">
+                <Link href={service.link} className="inline-flex items-center gap-2 text-sm text-gray-400 group-hover:text-white transition-colors mt-4">
                   Learn more <ArrowRight size={16} />
                 </Link>
               </motion.div>

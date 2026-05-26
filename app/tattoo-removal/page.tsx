@@ -20,9 +20,9 @@ export default function TattooRemovalPage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Tattoo <span className="text-[#d4af37]">Removal Services</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Tattoo <span className="text-[#d4af37]">Removal Services</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             Want to remove or lighten an old tattoo? We offer professional tattoo removal solutions for unwanted tattoos and tattoo corrections.
           </p>
         </div>
@@ -45,9 +45,9 @@ export default function TattooRemovalPage() {
             </p>
             <Link
               href="/contact"
-              className="bg-[#d4af37] text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2"
+              className="bg-[#d4af37] text-black font-bold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              Schedule Consultation <ArrowRight size={20} />
+              Schedule Consultation <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
           </div>
         </div>

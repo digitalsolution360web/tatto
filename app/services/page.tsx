@@ -10,38 +10,38 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   const services = [
-    { 
-      title: "Permanent Tattoos", 
+    {
+      title: "Permanent Tattoos",
       desc: "Get stylish and meaningful permanent tattoos created by our experienced tattoo artists. We use premium-quality ink for long-lasting results.",
       icon: <Heart className="w-8 h-8 text-[#d4af37]" />,
       link: "/permanent-tattoo"
     },
-    { 
-      title: "Customized Designs", 
+    {
+      title: "Customized Designs",
       desc: "Turn your ideas into personalized tattoo art based on your personality, story, style, and creativity.",
       icon: <Sparkles className="w-8 h-8 text-[#d4af37]" />,
       link: "/customized-tattoo"
     },
-    { 
-      title: "Tattoo Cover-Up", 
+    {
+      title: "Tattoo Cover-Up",
       desc: "Hide or transform an old, faded, or unwanted tattoo into a brand new masterpiece with our specialized cover-up techniques.",
       icon: <Star className="w-8 h-8 text-[#d4af37]" />,
       link: "/contact"
     },
-    { 
-      title: "Tattoo Removal", 
+    {
+      title: "Tattoo Removal",
       desc: "Want to remove or lighten an old tattoo? We offer professional, safe, and effective tattoo removal solutions.",
       icon: <Droplet className="w-8 h-8 text-[#d4af37]" />,
       link: "/tattoo-removal"
     },
-    { 
-      title: "Body Piercing", 
+    {
+      title: "Body Piercing",
       desc: "Safe and hygienic body piercing services performed by trained professionals using sterilized equipment and premium jewelry.",
       icon: <Shield className="w-8 h-8 text-[#d4af37]" />,
       link: "/body-piercing"
     },
-    { 
-      title: "Tattoo Products", 
+    {
+      title: "Tattoo Products",
       desc: "Buy professional tattoo products, machines, inks, and accessories directly from our studio.",
       icon: <MapPin className="w-8 h-8 text-[#d4af37]" />,
       link: "/tattoo-products"
@@ -64,16 +64,16 @@ export default function ServicesPage() {
           <div className="relative h-[300px] sm:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.15)] border border-white/10">
             <Image src="/tatto1.webp" alt="Tattoo Services" fill className="object-cover" />
           </div>
-          
+
           <div>
             <h4 className="text-[#d4af37] font-semibold tracking-wider uppercase mb-2">Premium Experience</h4>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Expertise You Can <span className="text-[#d4af37]">Trust</span></h2>
             <div className="w-16 h-1 bg-[#d4af37] mb-8"></div>
-            
+
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Our studio is equipped with the latest modern equipment, maintaining the highest standards of hygiene and safety for all our procedures.
             </p>
-            
+
             <ul className="space-y-4 mb-10">
               {["100% Sterilized Equipment", "Award-Winning Artists", "Custom Artwork Creation", "Friendly & Professional Staff"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
@@ -82,12 +82,12 @@ export default function ServicesPage() {
                 </li>
               ))}
             </ul>
-            
+
             <Link
               href="/contact"
-              className="bg-[#d4af37] text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-[#d4af37] text-black font-bold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center gap-2 w-full sm:w-auto justify-center"
             >
-              Book an Appointment <ArrowRight size={20} />
+              Book an Appointment <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-[#d4af37] transition-colors">{service.title}</h3>
               <p className="text-gray-400 leading-relaxed mb-8 flex-grow">{service.desc}</p>
-              <Link href={service.link} className="inline-flex items-center gap-2 text-[#d4af37] font-semibold hover:text-white transition-colors mt-auto w-fit border-b border-[#d4af37] hover:border-white pb-1">
-                Read More <ArrowRight size={18} />
+              <Link href={service.link} className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 group-hover:text-white transition-colors mt-auto">
+                Learn more <ArrowRight size={16} />
               </Link>
             </div>
           ))}

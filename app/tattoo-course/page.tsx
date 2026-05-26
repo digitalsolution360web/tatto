@@ -82,9 +82,9 @@ export default function TattooCoursePage() {
           </div>
           <Link
             href="/contact"
-            className="bg-[#d4af37] text-black font-bold text-lg px-10 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-lg"
+            className="bg-[#d4af37] text-black font-bold text-base sm:text-lg px-6 py-3 sm:px-10 sm:py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto"
           >
-            Enroll Now <ArrowRight size={20} />
+            Enroll Now <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </div>
       </div>

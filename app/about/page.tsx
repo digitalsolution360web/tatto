@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">About <span className="text-[#d4af37]">Om Tattoo</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4">About <span className="text-[#d4af37]">Om Tattoo</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto"></div>
         </div>
 

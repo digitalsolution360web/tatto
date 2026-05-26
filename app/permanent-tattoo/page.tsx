@@ -24,9 +24,9 @@ export default function PermanentTattooPage() {
     <div className="py-20 bg-neutral-950 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Permanent <span className="text-[#d4af37]">Tattoo Services</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6">Permanent <span className="text-[#d4af37]">Tattoo Services</span></h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             Get stylish and meaningful permanent tattoos created by experienced tattoo artists. We use premium-quality ink and hygienic equipment for long-lasting results.
           </p>
         </div>
@@ -50,9 +50,9 @@ export default function PermanentTattooPage() {
             <div className="mt-12">
               <Link
                 href="/contact"
-                className="bg-[#d4af37] text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                className="bg-[#d4af37] text-black font-bold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.3)] w-full sm:w-auto"
               >
-                Book Your Tattoo Session <ArrowRight size={20} />
+                Book Your Tattoo Session <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
             </div>
           </div>
