@@ -1,15 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ArrowRight, CheckCircle2, Droplet, Heart, MapPin, Shield, Sparkles, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, Droplet, Heart, MapPin, Shield, Sparkles, Star, X, ZoomIn } from "lucide-react";
 
 export default function Home() {
   const sliderImages = [
@@ -37,6 +38,8 @@ export default function Home() {
     "Certified Tattoo Courses",
     "Beginner to Advanced Training"
   ];
+
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   return (
     <div className="overflow-hidden">
@@ -141,6 +144,142 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Academy Brochure Section ── */}
+      <section className="py-20 bg-neutral-900 relative overflow-hidden">
+        {/* Decorative radial glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#d4af37]/5 blur-3xl" />
+        </div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h4 className="text-[#d4af37] font-semibold tracking-widest uppercase text-sm mb-2">Om Ink Tattoo Academy</h4>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">
+              Turn Your Passion Into a{" "}
+              <span className="text-[#d4af37]">Professional Career</span>
+            </h2>
+            <div className="w-20 h-1 bg-[#d4af37] mx-auto mb-4" />
+            <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
+              Click on the brochure below to view it in full detail.
+            </p>
+          </motion.div>
+
+          {/* Clickable Brochure Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-5xl mx-auto"
+          >
+            <div
+              onClick={() => setLightboxOpen(true)}
+              className="relative cursor-pointer group rounded-2xl overflow-hidden"
+              style={{
+                boxShadow: "0 0 0 1px rgba(212,175,55,0.3), 0 0 40px rgba(212,175,55,0.1), 0 25px 60px rgba(0,0,0,0.6)"
+              }}
+            >
+              {/* Gold border glow on hover */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-[#d4af37]/0 group-hover:border-[#d4af37]/80 transition-all duration-500 z-20 pointer-events-none" />
+
+              {/* Overlay with zoom icon */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 z-10 flex items-center justify-center rounded-2xl">
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 bg-black/60 backdrop-blur-sm border border-[#d4af37]/60 rounded-full p-5">
+                  <ZoomIn className="w-10 h-10 text-[#d4af37]" />
+                </div>
+              </div>
+
+              {/* Brochure Image */}
+              <Image
+                src="/tattohome.webp"
+                alt="Om Ink Tattoo Academy Brochure"
+                width={1400}
+                height={790}
+                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                priority
+              />
+            </div>
+
+            {/* CTA below card */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
+            >
+              <Link
+                href="/tattoo-course"
+                className="bg-[#d4af37] text-black font-bold px-8 py-4 rounded-full hover:bg-[#c5a028] transition-all duration-300 text-center flex items-center justify-center gap-2 shadow-lg shadow-[#d4af37]/20"
+              >
+                Explore Courses <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-[#d4af37]/40 hover:border-[#d4af37] bg-white/5 hover:bg-[#d4af37]/10 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 text-center"
+              >
+                Book a Free Consultation
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Lightbox Modal ── */}
+      <AnimatePresence>
+        {lightboxOpen && (
+          <motion.div
+            key="lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+            onClick={() => setLightboxOpen(false)}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
+
+            {/* Close Button */}
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="absolute top-4 right-4 z-10 bg-black/60 hover:bg-[#d4af37] border border-[#d4af37]/50 hover:border-[#d4af37] text-white hover:text-black rounded-full p-2.5 transition-all duration-300"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Fullscreen Image */}
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="relative z-10 max-w-[95vw] max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+              style={{ boxShadow: "0 0 60px rgba(212,175,55,0.25)" }}
+            >
+              <Image
+                src="/tattohome.webp"
+                alt="Om Ink Tattoo Academy Brochure Fullscreen"
+                width={1400}
+                height={790}
+                className="w-full h-auto max-h-[88vh] object-contain"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Studio Vibe Section (Left Image, Right Content) */}
       <section className="py-24 bg-neutral-900 relative">
