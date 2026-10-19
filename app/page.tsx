@@ -27,15 +27,90 @@ export default function Home() {
     "/banner3.webp"
   ];
 
-  const services = [
-    { title: "Permanent Tattoos", icon: <Heart className="w-8 h-8 text-[#d4af37]" />, link: "/permanent-tattoo" },
-    { title: "Customized Designs", icon: <Sparkles className="w-8 h-8 text-[#d4af37]" />, link: "/customized-tattoo" },
-    { title: "Tattoo Cover-Up & Correction", icon: <Star className="w-8 h-8 text-[#d4af37]" />, link: "/contact" },
-    { title: "Tattoo Removal Services", icon: <Droplet className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-removal" },
-    { title: "Body Piercing", icon: <Shield className="w-8 h-8 text-[#d4af37]" />, link: "/body-piercing" },
-    { title: "Tattoo Products Sales", icon: <MapPin className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-products" },
-    { title: "Tattoo Training Courses", icon: <CheckCircle2 className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-course" },
-  ];
+  // const services = [
+  //   { title: "Permanent Tattoos", icon: <Heart className="w-8 h-8 text-[#d4af37]" />, link: "/permanent-tattoo" },
+  //   { title: "Customized Designs", icon: <Sparkles className="w-8 h-8 text-[#d4af37]" />, link: "/customized-tattoo" },
+  //   { title: "Tattoo Cover-Up & Correction", icon: <Star className="w-8 h-8 text-[#d4af37]" />, link: "/contact" },
+  //   { title: "Tattoo Removal Services", icon: <Droplet className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-removal" },
+  //   { title: "Body Piercing", icon: <Shield className="w-8 h-8 text-[#d4af37]" />, link: "/body-piercing" },
+  //   { title: "Tattoo Products Sales", icon: <MapPin className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-products" },
+  //   { title: "Tattoo Training Courses", icon: <CheckCircle2 className="w-8 h-8 text-[#d4af37]" />, link: "/tattoo-course" },
+  // ];
+
+const services = [
+  {
+    number: "01",
+    title: "Tattoo Services",
+    subtitle: "Art that tells your story",
+    description:
+      "From meaningful minimal designs to detailed, large-scale masterpieces, every tattoo is crafted around your individuality.",
+    icon: <Heart className="h-6 w-6" />,
+    link: "/permanent-tattoo",
+    items: [
+      "Custom Tattoo Designs",
+      "Black & Grey Tattoos",
+      "Realism & Portrait Tattoos",
+      "Fine Line Tattoos",
+      "Geometric Tattoos",
+      "Tribal & Polynesian Tattoos",
+      "Spiritual & Religious Tattoos",
+      "Name & Lettering Tattoos",
+      "Minimalist & Small Tattoos",
+      "Mandala & Ornamental Tattoos",
+      "Sleeves & Full Arm Tattoos",
+      "Full Back Tattoos",
+      "Cover-Up Tattoos",
+      "Memorial & Couple Tattoos",
+      "Colour Tattoos",
+      "3D Tattoos",
+    ],
+  },
+  {
+    number: "02",
+    title: "Piercing Services",
+    subtitle: "Express your individuality",
+    description:
+      "Explore piercing options that complement your personal style, with placement guidance tailored to your preferences.",
+    icon: <Sparkles className="h-6 w-6" />,
+    link: "/body-piercing",
+    items: [
+      "Ear Piercing",
+      "Nose Piercing",
+      "Helix & Cartilage Piercing",
+      "Other Body Piercing Services",
+    ],
+  },
+  {
+    number: "03",
+    title: "Tattoo Removal",
+    subtitle: "A fresh start for your skin",
+    description:
+      "Explore removal consultations and tattoo lightening options to help plan your next step or prepare for a cover-up.",
+    icon: <Droplet className="h-6 w-6" />,
+    link: "/tattoo-removal",
+    items: [
+      "Laser Tattoo Removal (if available)",
+      "Tattoo Removal Consultation",
+      "Tattoo Lightening for Cover-Ups",
+    ],
+  },
+  {
+    number: "04",
+    title: "Aftercare & Consultation",
+    subtitle: "Thoughtful guidance, every step",
+    description:
+      "Get personalised advice on design, placement, sizing, preparation and aftercare for a more informed tattoo experience.",
+    icon: <ShieldCheck className="h-6 w-6" />,
+    link: "/contact",
+    items: [
+      "Personalised Tattoo Consultation",
+      "Tattoo Placement & Size Guidance",
+      "Tattoo Aftercare Guidance",
+      "Cover-Up Consultation",
+      "Custom Design & Stencil Preparation",
+    ],
+  },
+];
 
   const whyChooseUs = [
     "Professional Tattoo Artists",
@@ -784,15 +859,213 @@ export default function Home() {
     </div>
   </div>
 </section>
-    {/* Premium Services Section */}
+
+
+{/* OM Tattoos Studio — Premium Services Section */}
+<section className="relative overflow-hidden bg-[#090909] py-16 sm:py-20 lg:py-24">
+
+  {/* Background Details */}
+  <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#d4af37]/[0.06] blur-[110px]" />
+  <div className="pointer-events-none absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-[#d4af37]/[0.04] blur-[120px]" />
+
+  <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+
+    {/* Section Header */}
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="mb-12 grid gap-7 lg:mb-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-end"
+    >
+      <div>
+        <div className="mb-5 flex items-center gap-3">
+          <span className="h-px w-10 bg-[#d4af37]" />
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#d4af37]">
+            OM Tattoos Studio & Piercing Hub
+          </span>
+        </div>
+
+        <h2 className="max-w-3xl font-serif text-4xl font-medium leading-[1.12] text-white sm:text-5xl lg:text-7xl">
+          Your Skin.
+          <br />
+          Your Story.
+          <span className="mt-1 block italic text-[#d4af37]">
+            Our Art.
+          </span>
+        </h2>
+      </div>
+
+      <div className="max-w-lg lg:ml-auto lg:pb-2">
+        <p className="text-sm leading-7 text-neutral-400 sm:text-base sm:leading-8">
+          From custom tattoos and expressive piercings to cover-up
+          consultations and aftercare guidance, discover artistic services
+          designed around your personality and vision.
+        </p>
+
+        <a
+          href="https://wa.me/918332805594"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-3 border-b border-[#d4af37]/60 pb-2 text-sm font-semibold tracking-wide text-[#d4af37] transition-colors hover:text-white"
+        >
+          Discuss Your Design
+          <ArrowRight size={17} />
+        </a>
+      </div>
+    </motion.div>
+
+    {/* Gold Separator */}
+    <div className="mb-8 h-px bg-gradient-to-r from-[#d4af37]/70 via-white/15 to-transparent sm:mb-10" />
+
+    {/* Service Cards */}
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
+
+      {services.map((service, index) => (
+        <motion.article
+          key={service.number}
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.55,
+            delay: index * 0.1,
+          }}
+          className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.09] bg-gradient-to-br from-[#171717] to-[#0e0e0e] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#d4af37]/40 sm:p-8 lg:p-9"
+        >
+          {/* Corner Glow */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#d4af37]/[0.06] blur-3xl transition-all duration-500 group-hover:bg-[#d4af37]/[0.12]" />
+
+          {/* Card Top */}
+          <div className="relative mb-7 flex items-start justify-between gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#d4af37]/25 bg-[#d4af37]/[0.07] text-[#d4af37] transition-all duration-300 group-hover:bg-[#d4af37]/[0.15]">
+              {service.icon}
+            </div>
+
+            <span className="font-serif text-5xl font-medium leading-none text-white/[0.10] transition-colors duration-300 group-hover:text-[#d4af37]/40">
+              {service.number}
+            </span>
+          </div>
+
+          {/* Title */}
+          <div className="relative">
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#d4af37] sm:text-xs">
+              {service.subtitle}
+            </p>
+
+            <h3 className="font-serif text-2xl font-medium text-white sm:text-3xl">
+              {service.title}
+            </h3>
+
+            <p className="mt-4 max-w-xl text-sm leading-7 text-neutral-400">
+              {service.description}
+            </p>
+          </div>
+
+          {/* Service List */}
+          <div className="relative mt-7 flex-1 border-t border-white/[0.09] pt-5">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
+              Explore Our Services
+            </p>
+
+            <ul className="grid grid-cols-1 gap-x-5 gap-y-3 sm:grid-cols-2">
+              {service.items.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm leading-6 text-neutral-300 transition-colors duration-300 hover:text-white"
+                >
+                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#d4af37]" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Card Footer */}
+          <div className="relative mt-7 border-t border-white/[0.09] pt-5">
+            <Link
+              href={service.link}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#d4af37] transition-all duration-300 hover:gap-3 hover:text-white"
+            >
+              Explore Service
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          {/* Bottom Accent */}
+          <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#d4af37] transition-all duration-500 group-hover:w-full" />
+        </motion.article>
+      ))}
+
+    </div>
+
+    {/* Studio CTA */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="relative mt-8 overflow-hidden rounded-2xl border border-[#d4af37]/25 bg-[#12110d] p-6 sm:mt-10 sm:p-9 lg:flex lg:items-center lg:justify-between lg:gap-8"
+    >
+      <div className="pointer-events-none absolute -right-10 -top-20 h-56 w-56 rounded-full bg-[#d4af37]/[0.07] blur-3xl" />
+
+      <div className="relative">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#d4af37] sm:text-xs">
+          Let’s Create Something Meaningful
+        </p>
+
+        <h3 className="font-serif text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
+          Your Vision. Our Art. Permanent Impressions.
+        </h3>
+
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-neutral-400">
+          Have a design in mind? Connect with our studio to discuss your
+          tattoo idea, preferred placement or piercing service.
+        </p>
+      </div>
+
+      <div className="relative mt-6 shrink-0 lg:mt-0">
+        <a
+          href="https://wa.me/918332805594"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[#d4af37] px-6 py-4 text-sm font-bold text-black transition-all duration-300 hover:bg-[#f0d47a] sm:w-auto"
+        >
+          Book a Consultation
+          <ArrowRight size={17} />
+        </a>
+      </div>
+    </motion.div>
+
+    {/* Studio Location */}
+    <div className="mt-8 flex flex-col gap-3 border-t border-white/[0.08] pt-6 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+      <p className="flex items-start gap-2">
+        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#d4af37]" />
+        Spring Road, Commissioner Office Backside, Visakhapatnam
+      </p>
+
+      <a
+        href="https://www.instagram.com/omtattoosstudio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-colors hover:text-[#d4af37]"
+      >
+        Follow @omtattoosstudio
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    {/* Premium Services Section 
 <section className="relative overflow-hidden bg-[#0b0b0b] py-16 sm:py-20 lg:py-24">
-  {/* Background Glow */}
+
   <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#d4af37]/[0.045] blur-[120px]" />
   <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#d4af37]/[0.04] blur-[120px]" />
 
   <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 
-    {/* Section Heading */}
+  
     <motion.div
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -822,10 +1095,8 @@ export default function Home() {
       </div>
     </motion.div>
 
-    {/* Gold Divider */}
     <div className="mb-8 h-px w-full bg-gradient-to-r from-[#d4af37]/60 via-white/10 to-transparent sm:mb-10" />
 
-    {/* Services Grid */}
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
       {services.map((service, index) => (
         <motion.div
@@ -839,10 +1110,9 @@ export default function Home() {
           }}
           className="group relative flex min-h-[240px] flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#111111] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#d4af37]/40 hover:bg-[#151515] sm:min-h-[260px] sm:p-8"
         >
-          {/* Hover Glow */}
+  
           <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#d4af37]/[0.07] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-          {/* Card Header */}
           <div className="relative mb-8 flex items-start justify-between">
             <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#d4af37]/20 bg-[#d4af37]/[0.07] text-[#d4af37] transition-all duration-300 group-hover:border-[#d4af37]/40 group-hover:bg-[#d4af37]/[0.13]">
               <span className="[&>svg]:h-7 [&>svg]:w-7">
@@ -855,7 +1125,7 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Service Details */}
+    
           <div className="relative flex flex-1 flex-col">
             <h3 className="mb-3 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#d4af37] sm:text-2xl">
               {service.title}
@@ -877,13 +1147,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Accent */}
+       
           <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#d4af37] transition-all duration-500 group-hover:w-full" />
         </motion.div>
       ))}
     </div>
 
-    {/* Bottom Note */}
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -905,6 +1174,7 @@ export default function Home() {
 
   </div>
 </section>
+*/}
      
 {/* Why Choose Us — Premium Editorial Layout */}
 <section className="relative overflow-hidden bg-[#090909] py-16 sm:py-20 lg:py-28">
