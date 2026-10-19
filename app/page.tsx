@@ -22,8 +22,8 @@ import {
 } from "lucide-react";
 export default function Home() {
   const sliderImages = [
-    "/banner.webp",
-    "/banner2.webp",
+    "/banner4.webp",
+    "/banner5.webp",
     "/banner3.webp"
   ];
 
